@@ -1,0 +1,4 @@
+To Run the program
+
+python3 filename (hangman.py)
+

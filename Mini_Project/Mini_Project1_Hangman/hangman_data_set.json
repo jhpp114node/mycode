@@ -1,0 +1,54 @@
+{
+  "hangman_data" : [
+  {
+    "4": [
+      "aabb",
+      "able",
+      "acid",
+      "aged",
+      "also",
+      "area",
+      "army",
+      "away",
+      "baby",
+      "back",
+      "ball",
+      "band",
+      "bank",
+      "base",
+      "came",
+      "camp",
+      "card",
+      "care",
+      "case",
+      "cash"
+    ]
+  },
+  {
+    "5": [
+      "about",
+      "above",
+      "abuse",
+      "actor",
+      "acute",
+      "admit",
+      "adopt",
+      "adult",
+      "after"
+    ]
+  },
+  {
+    "6": [
+      "survey",
+      "switch",
+      "symbol",
+      "system",
+      "taking",
+      "talent",
+      "target",
+      "taught",
+      "tenant"
+    ]
+  }
+]
+}
