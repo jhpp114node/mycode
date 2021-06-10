@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from one_piece_read import displayAllCharacters, searchByName, searchByDevilFruit
 from one_piece_write import form_group_by_played_year
+from one_piece_graph import generate_graph
 
 onepiece_character_list = []
 with open ("./Onepiece_data/onepice_fruits.txt") as onepiece_devil_fruit_file:
@@ -9,7 +10,7 @@ with open ("./Onepiece_data/onepice_fruits.txt") as onepiece_devil_fruit_file:
 
 
 one_piece_episode_list = []
-with open('./Onepiece_data/ONE_PIECE_Episode.txt', 'r') as episode_file:
+with open('Onepiece_data/ONE_PIECE_Episode.txt', 'r') as episode_file:
     for each_line in episode_file:
         one_piece_episode_list.append(each_line)
 
@@ -26,6 +27,7 @@ def main():
                                 "\n2. Search One Piece Character by name\n"
                                 "3. Search by Devil's Fruit name\n"
                                 "4. Save Episode title based on the year\n"
+                                "5. View episode played distribution graph by year\n"
                                 "-1 to exit\n> ")
             if not user_choice.isnumeric() and user_choice not in user_choice_tuple:
                 assert False
@@ -40,6 +42,8 @@ def main():
                 form_group_by_played_year(one_piece_episode_list)
             elif user_choice == '-1':
                 break
+            elif user_choice == '5':
+                generate_graph(one_piece_episode_list)
         except AssertionError:
             print("Invalid input...")
 
