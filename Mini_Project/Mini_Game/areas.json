@@ -1,0 +1,65 @@
+{
+  "Garden" : {
+    "south" : "Home",
+    "east"  : "The Fallen Castle Entrance",
+    "NPC" :
+    {
+      "name": "A broken statue",
+      "description": "A broken statue...\nLooks like someone colored with Red, Blue, and Green"
+    },
+    "item"  : [
+      {
+        "letter": "Welcome to the game.Your goal is to steal money from the castle Good luck",
+        "letter from mom": "Make sure you come back by 9 pm for dinner!"
+      }
+    ],
+    "Get_able": true
+  },
+
+  "Home" : {
+    "north" : "Garden",
+    "NPC":
+    {
+      "name": "Mom",
+      "description":"Hey Chad, make sure you come back by 9 pm for dinner! "
+    }
+  },
+
+  "The Fallen Castle Entrance" : {
+    "west" : "Garden",
+    "south": "The Main Hall",
+    "item" : [
+      {"Key": "A Key to open the Main Hall"}
+    ],
+    "NPC":  {
+      "name":"The key maker",
+      "description":  "Hello, welcome to the castle...\nI am the key maker\nMeans... I can make a key! haha!"
+    },
+    "Get_able": false
+  },
+
+  "The Main Hall" : {
+    "quiz": [
+      {
+      "question": "How to print something in python",
+      "choice": ["1. System.out.println()", "2. print()", "3. std::cout << something << std::end"],
+       "answer": 2
+      },
+      {
+        "question": "What time did the mother tell you to come back?",
+        "choice": ["1. 10 pm", "2. 9 pm", "3. 8 pm"],
+        "answer": 2
+      },
+      {
+        "question": "What color is the statue?",
+        "choice": ["1. red,green,blue", "2. red,blue,yellow", "3. red,green,yellow"],
+        "answer": 1
+      }
+    ]
+  },
+
+  "Pantry" : {
+    "south" : "Dining Room",
+    "item" : "cookie"
+  }
+}
