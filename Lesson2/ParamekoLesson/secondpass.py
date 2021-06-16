@@ -13,6 +13,7 @@ t = paramiko.Transport("10.10.2.3", 22)
 # Where to go, but we do not know How to access
 t.connect(username="bender", password=getpass.getpass())
 
+# Secure File Transfer Protocol 
 # we want to trasnfer a FILE, so we need an SFTP connection!
 sftp =  paramiko.SFTPClient.from_transport(t)
 
