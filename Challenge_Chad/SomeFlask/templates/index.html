@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chad Challenge</title>
+</head>
+<body>
+    <div>
+        {% for each_data in group_data%}
+            <p>{{each_data.get("ip")}} {{each_data.get("fqdn")}} #{{each_data.get("hostname")}}</p>
+        {% endfor %}
+    </div>
+    <!--Form to add Data-->
+    {% if session["permission-w"] %}
+        <div>
+            <h1>You have permission to add</h1>
+            <form action="/add" method="POST">
+                <div>
+                    <label for="hostname">Hostname: </label>
+                    <input type="text" id="hostname" name="hostname" required>
+                </div>
+                <div>
+                    <label for="ip">ip: </label>
+                    <input type="text" id="ip" name="ip" required>
+                </div>
+                <div>
+                    <label for="fqdn">fqdn: </label>
+                    <input type="text" id="fqdn" name="fqdn" required>
+                </div>
+                <div>
+                    <input type="submit" value="Add to group">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>Throw Your Permission</h3>
+            <a href="/destroy_permission">Destroy Permission</a>
+        </div>
+    {% else %}
+        <a href="/permission">Click here to get permission to add into group</a>
+    {% endif %}
+</body>
+</html>
